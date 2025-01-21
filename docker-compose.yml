@@ -1,4 +1,10 @@
-version: '3.8'
+secrets:
+  npmrc:
+    file: ${HOME}/.npmrc
+volumes:
+  node_modules:
+  postgres:
+  localstack:
    
 services:
 
@@ -62,6 +68,3 @@ services:
       - 'localstack:/var/lib/localstack'
       - '/var/run/docker.sock:/var/run/docker.sock'
 
-volumes:
-  postgres:
-  localstack:
